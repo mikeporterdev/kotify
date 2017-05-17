@@ -2,19 +2,24 @@ package spotifykotlin.models
 
 import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.describe
+import org.jetbrains.spek.api.dsl.it
 import org.jetbrains.spek.api.dsl.on
-import org.junit.jupiter.api.Assertions.*
-
-/**
- * Created by m_por on 16/05/2017.
- */
-
+import org.junit.jupiter.api.Assertions.assertNotNull
+import spotifykotlin.Api
 
 object ImageSpec : Spek({
-    describe("idk") {
-        on("should return true") {
-            assertTrue(false)
+    describe("api") {
+        val api = Api()
 
+        on("artists") {
+            val search = api.search("test")
+
+            it("should return pages") {
+                assertNotNull(search.albums.items)
+                assertNotNull(search.artists.items)
+                assertNotNull(search.playlists.items)
+                assertNotNull(search.tracks.items)
+            }
         }
     }
 })

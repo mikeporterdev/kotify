@@ -6,16 +6,7 @@ import spotifykotlin.models.Artist
 import spotifykotlin.models.SearchResult
 
 
-fun main(args: Array<String>) {
-    val x = SpotifyImpl()
-    val search = x.search("test")
-    println(search.albums)
-    println(search.artists)
-
-    val artists = x.getArtist(search.artists.items.get(0).id)
-}
-
-class SpotifyImpl {
+class Api {
     val BASE_URL = "https://api.spotify.com/v1"
     val mapper = jacksonObjectMapper()
 
