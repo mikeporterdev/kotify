@@ -1,9 +1,9 @@
-package monzokotlin
+package spotifykotlin
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import monzokotlin.models.Artist
-import monzokotlin.models.SearchResult
+import spotifykotlin.models.Artist
+import spotifykotlin.models.SearchResult
 
 
 fun main(args: Array<String>) {

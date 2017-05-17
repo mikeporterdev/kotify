@@ -1,4 +1,4 @@
-package monzokotlin.models
+package spotifykotlin.models
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

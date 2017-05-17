@@ -1,8 +1,8 @@
-package monzokotlin.models
+package spotifykotlin.models
 
-import monzokotlin.models.simple.SimpleAlbum
-import monzokotlin.models.simple.SimpleArtist
-import monzokotlin.models.simple.SimplePlaylist
+import spotifykotlin.models.simple.SimpleAlbum
+import spotifykotlin.models.simple.SimpleArtist
+import spotifykotlin.models.simple.SimplePlaylist
 
 data class SearchResult(
         val albums: Page<SimpleAlbum>,

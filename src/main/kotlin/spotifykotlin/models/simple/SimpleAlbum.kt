@@ -1,8 +1,8 @@
-package monzokotlin.models.simple
+package spotifykotlin.models.simple
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
-import monzokotlin.models.Image
+import spotifykotlin.models.Image
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class SimpleAlbum(

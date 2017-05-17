@@ -1,7 +1,7 @@
-package monzokotlin.models
+package spotifykotlin.models
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
-import monzokotlin.models.simple.SimpleArtist
+import spotifykotlin.models.simple.SimpleArtist
 
 /**
  * Created by m_por on 16/05/2017.

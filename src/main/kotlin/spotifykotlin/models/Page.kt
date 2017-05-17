@@ -1,4 +1,4 @@
-package monzokotlin.models
+package spotifykotlin.models
 
 /**
  * Created by m_por on 16/05/2017.
