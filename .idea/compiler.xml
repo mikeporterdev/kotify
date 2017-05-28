@@ -6,13 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="monzo-kotlin" />
-        <module name="spotify-kotlin" />
+        <module name="kotify" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="monzo-kotlin" target="1.5" />
-      <module name="spotify-kotlin" target="1.5" />
+      <module name="kotify" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
