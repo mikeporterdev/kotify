@@ -9,7 +9,7 @@ import org.jetbrains.spek.api.dsl.it
 import org.jetbrains.spek.api.dsl.on
 import org.junit.jupiter.api.Assertions.*
 
-object ImageSpec : Spek({
+object ApiSpek : Spek({
     describe("api") {
         val api = Api.instance
 
