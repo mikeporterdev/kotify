@@ -8,11 +8,17 @@ import kotify.models.SearchResult
 import kotify.models.simple.SimpleArtist
 
 
-class Api {
+class Api private constructor() {
+    private object Holder {
+        val INSTANCE = Api()
+    }
+
+    companion object {
+        val instance: Api by lazy { Holder.INSTANCE }
+    }
+
     val BASE_URL = "https://api.spotify.com/v1"
     val mapper = jacksonObjectMapper()
-
-
 
     fun search(criteria: String,
                type: List<SearchType> = listOf(ALBUM, TRACK, PLAYLIST, ARTIST
