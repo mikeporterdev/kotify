@@ -1,4 +1,4 @@
-package spotifykotlin.models
+package kotify.models
 
 /**
  * Created by m_por on 16/05/2017.

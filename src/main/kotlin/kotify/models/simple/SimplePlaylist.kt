@@ -1,4 +1,4 @@
-package spotifykotlin.models.simple
+package kotify.models.simple
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 

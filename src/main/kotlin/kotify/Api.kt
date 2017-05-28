@@ -1,11 +1,11 @@
-package spotifykotlin
+package kotify
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import spotifykotlin.SearchType.*
-import spotifykotlin.models.Artist
-import spotifykotlin.models.SearchResult
-import spotifykotlin.models.simple.SimpleArtist
+import kotify.SearchType.*
+import kotify.models.Artist
+import kotify.models.SearchResult
+import kotify.models.simple.SimpleArtist
 
 
 class Api {

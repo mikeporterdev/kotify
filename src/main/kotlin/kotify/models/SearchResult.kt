@@ -1,8 +1,8 @@
-package spotifykotlin.models
+package kotify.models
 
-import spotifykotlin.models.simple.SimpleAlbum
-import spotifykotlin.models.simple.SimpleArtist
-import spotifykotlin.models.simple.SimplePlaylist
+import kotify.models.simple.SimpleAlbum
+import kotify.models.simple.SimpleArtist
+import kotify.models.simple.SimplePlaylist
 
 data class SearchResult(
         // Maybe implements searchable?
