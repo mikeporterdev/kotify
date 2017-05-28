@@ -5,6 +5,7 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import spotifykotlin.SearchType.*
 import spotifykotlin.models.Artist
 import spotifykotlin.models.SearchResult
+import spotifykotlin.models.simple.SimpleArtist
 
 
 class Api {
@@ -32,6 +33,11 @@ class Api {
     fun getArtist(id: String) : Artist {
         val response = khttp.get(BASE_URL + "/artists/" + id)
 
+        return mapper.readValue<Artist>(response.text)
+    }
+
+    fun getArtist(artist: SimpleArtist) : Artist {
+        val response = khttp.get(BASE_URL + "/artists/" + artist.id)
         return mapper.readValue<Artist>(response.text)
     }
 }
