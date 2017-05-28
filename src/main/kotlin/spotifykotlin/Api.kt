@@ -2,6 +2,7 @@ package spotifykotlin
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import spotifykotlin.SearchType.*
 import spotifykotlin.models.Artist
 import spotifykotlin.models.SearchResult
 
@@ -12,8 +13,16 @@ class Api {
 
 
 
-    fun search(criteria: String, type: String = "album,track,playlist,artist"): SearchResult {
-        val payload = mapOf(Pair("q", criteria), Pair("type", type))
+    fun search(criteria: String,
+               type: List<SearchType> = listOf(ALBUM, TRACK, PLAYLIST, ARTIST
+    )): SearchResult {
+        val searchType =
+                type.fold("") { a, b: SearchType -> a + b.type + "," }
+                        .trimEnd(',')
+        val payload = mapOf(
+                Pair("q", criteria),
+                Pair("type", searchType)
+        )
 
         val response = khttp.get(BASE_URL + "/search", params = payload)
 
@@ -27,3 +36,9 @@ class Api {
     }
 }
 
+enum class SearchType(val type: String) {
+    ALBUM("album"),
+    TRACK("track"),
+    PLAYLIST("playlist"),
+    ARTIST("artist")
+}

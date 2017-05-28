@@ -11,7 +11,7 @@ object ImageSpec : Spek({
     describe("api") {
         val api = Api()
 
-        on("artists") {
+        on("search") {
             val search = api.search("test")
 
             it("should return pages") {
